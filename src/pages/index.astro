@@ -152,12 +152,11 @@ const schemaBreadcrumb = {
   preconnectDomains={finalPreconnectDomains}
   siteUrl={currentUrl}
   keywords={homeKeywords}
+  name="google-site-verification" content={google}
+  name="yandex-verification" content={yandex}
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaWebPage)} />
   <script type="application/ld+json" set:html={JSON.stringify(schemaBreadcrumb)} />
-
-  <meta name="google-site-verification" content={google} />
-  <meta name="yandex-verification" content={yandex} />
 
   <main class="home-page" itemscope itemtype="http://schema.org/WebPage">
     <meta itemprop="url" content={currentUrl} />
