@@ -4,7 +4,7 @@ import Layout from '../layouts/BaseLayout.astro';
 import VideoCard from '../components/VideoCard.astro';
 import { slugify } from '../utils/slugify';
 import { getAllVideos, type VideoData } from '../utils/data';
-import { terbit, nama, url, desk, google, yandex } from '../utils/site';
+import { terbit, nama, url, desk } from '../utils/site';
 export const prerender = true;
 
 const allVideos: VideoData[] = await getAllVideos();
@@ -152,8 +152,6 @@ const schemaBreadcrumb = {
   preconnectDomains={finalPreconnectDomains}
   siteUrl={currentUrl}
   keywords={homeKeywords}
-  name="google-site-verification" content={google}
-  name="yandex-verification" content={yandex}
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaWebPage)} />
   <script type="application/ld+json" set:html={JSON.stringify(schemaBreadcrumb)} />
